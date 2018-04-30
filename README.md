@@ -5,9 +5,9 @@ TODO List – Java
 
 To start program you need to have MySql server set up listening on port 3306 and optionally HTTP server running. Database 'todo_db' needs to be created and table 'task_table' with a specific columns inside it:
 
-INT PRIMARY_KEY AUTO_INCREMENT task_id, 
-TIMESTAMP task_data, 
-VARCHAR task_info.
+INT PRIMARY_KEY AUTO_INCREMENT task_id, <br />
+TIMESTAMP task_data, <br />
+VARCHAR task_info. <br />
 
 ORM specification is used by Hibernate framework.
 
