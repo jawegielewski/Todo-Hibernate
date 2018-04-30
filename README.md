@@ -3,20 +3,25 @@ TODO List – Java
 - Hibernate
 - design pattern (observer)
 
-Do uruchomienia programu potrzeba aktywnego serwera MySql nasłuchującego na porcie 3306, opcjonalnie serwer http. Należy utworzyć bazę danych todo_db, a w niej tabelę task_table z kolumnami:
+To start program you need to have MySql server set up listening on port 3306 and optionally HTTP server running. Database 'todo_db' needs to be created and table 'task_table' with a specific columns inside it:
+
 INT PRIMARY_KEY AUTO_INCREMENT task_id, 
 TIMESTAMP task_data, 
 VARCHAR task_info.
 
-Program do ORM wykorzystuje framework Hibernate.
+ORM specification is used by Hibernate framework.
 
 
-Program należy uruchomić i klikając odpowiedni przycisk dostaniemy do dyspozycji szereg funkcji:
-•	‘l’ – wywołuje nową instancję klasy rozszerzającej Timer, aktualizuje co sekundę czas oraz sprawdza czy nadchodzą taski,
-•	‘a’ – na podstawie wprowadzonych danych dodawane i utrwalane zostają nowe instancje tasków w bazie danych,
-•	‘r’ – usuwa z bazy danych task o wskazanym id,
-•	‘e’ – edytuje i utrwala taska o określonym id w bazie danych,
-•	‘d’ – wyświetla listę tasków na określony dzień.
 
 
-Do każdego zadania (wzorzec obserwator – publisher) przypisywana jest jedna instancja klasy Clock, wyznaczającej aktualny czas i obserwująca nadchodzące zadania (wzorzec obserwator – observer).
+How to use.
+Application when run waits for user to click the specific button on keyboard that is:
+
+•	‘l’ – invokes new instance of class extending Timer, updates the time every second and verifies if any task comes,
+•	‘a’ – new instances of tasks in database are added and persisted based on user's input data,
+•	‘r’ – removes the task with specific id from database,
+•	‘e’ – edits and persists the task with specific id in database,
+•	‘d’ – displays the list of tasks for specific day.
+
+
+For every task (observer design pattern - publisher) there is one instance of Clock class assigned which defines current time and observes tasks comming (observer design pattern - observer).
