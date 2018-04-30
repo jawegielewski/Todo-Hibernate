@@ -17,11 +17,11 @@ ORM specification is used by Hibernate framework.
 How to use.
 Application when run waits for user to click the specific button on keyboard that is:
 
-•	‘l’ – invokes new instance of class extending Timer, updates the time every second and verifies if any task comes,
-•	‘a’ – new instances of tasks in database are added and persisted based on user's input data,
-•	‘r’ – removes the task with specific id from database,
-•	‘e’ – edits and persists the task with specific id in database,
-•	‘d’ – displays the list of tasks for specific day.
+•	‘l’ – invokes new instance of class extending Timer, updates the time every second and verifies if any task comes, <br />
+•	‘a’ – new instances of tasks in database are added and persisted based on user's input data, <br />
+•	‘r’ – removes the task with specific id from database, <br />
+•	‘e’ – edits and persists the task with specific id in database, <br />
+•	‘d’ – displays the list of tasks for specific day. <br />
 
 
 For every task (observer design pattern - publisher) there is one instance of Clock class assigned which defines current time and observes tasks comming (observer design pattern - observer).
