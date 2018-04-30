@@ -1,5 +1,8 @@
 TODO List – Java
 
+- Hibernate
+- design pattern (observer)
+
 Do uruchomienia programu potrzeba aktywnego serwera MySql nasłuchującego na porcie 3306, opcjonalnie serwer http. Należy utworzyć bazę danych todo_db, a w niej tabelę task_table z kolumnami:
 INT PRIMARY_KEY AUTO_INCREMENT task_id, 
 TIMESTAMP task_data, 
